@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    margin: 0;
+    color: black;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: auto;
+    padding: 2rem;
+    min-width: min-content;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main h1:first-letter {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 10rem;
+    line-height: .5;
+    font-style: italic;
+    letter-spacing: -4px;
+}
+
+main h1:first-line {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+h1 {
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+}
+
+nav ul {
+    margin: auto;
+    padding: 0;
+    width: 100%;
+}
+
+nav li {
+    display: flex;
+    justify-content: stretch;
+    border: 1px solid;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+nav section {
+    width: 100%;
+}
+
+nav li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, .8);
+    font-size: 5rem;
+    padding: 1rem;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+    transition: background-color 1s ease-in-out;
+    border: 40px solid white;
+}
+
+nav li a:hover {
+background-color:rgba(0, 0, 0, 1);
+color: white;
+text-shadow: 1px 1px 3px rgba(255, 255, 255, .3);
+text-decoration: none;
+background-size: 100%;
+}
+
+nav .description {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+nav .description h1 {
+    font-size: 1.125rem;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .3);
+    text-align: left;
+    max-height: 100%;
+}
+
+nav .description h1:first-letter {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-style: inherit;
+    letter-spacing: inherit;
+}
+
+main h1:first-line {
+    font-size: inherit;
+    font-style: inherit;
+}
+
+nav .description h1:hover {
+    cursor: pointer;
+}
+
+nav .description p {
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    color: rgb(52, 52, 52);
+}
+
+nav .description p.show {
+    height: auto;
+    padding: 4vw 0 0 0;
+}
+
+nav li a.one {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .3);
+    background: url("one.png");
+    background-position: top left;
+    background-size: 250%;
+}
+
+nav li a.two {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, .3);
+    background: url("two.png");
+    background-position: center;
+    background-size: 250%;
+    padding: 1rem;
+}
+
+nav li a.one:hover, nav li a.two:hover {
+    color: white;
+}
+
+nav li.bac a.back {
+    height: min-content;
+    width: 100%;
+    padding: 1rem;
+    text-transform: lowercase;
+    font-size: 1.25rem;
+    letter-spacing: 10px;
+}
+
+nav li.bac a.back:hover {
+    font-style: none;
+    opacity: .8;
+
+}
+
+nav li.bac a.back:active {
+    opacity: .5;
+}
+
+@media only screen and (min-width: 550px) {
+
+    main {
+        margin: 3rem auto;
+    }
+
+    h1 {
+        padding: 2rem;
+    }
+
+    main h1:first-letter {
+        font-family:inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-style: inherit;
+        letter-spacing: inherit;
+    }
+    
+    main h1:first-line {
+        font-size: inherit;
+        font-style: inherit;
+    }
+
+    nav li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+        margin: auto;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav li a {
+        height: 20vh;
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+
+    main {
+        border: 1px solid rgba(0, 0, 0, .6);
+        max-width: 60%;
+        box-shadow: 20px 15px 0 rgba(0, 0, 0, .6);
+    }
+
+    h1 {
+        min-width: max-content;
+    }
+
+    nav li a {
+        margin: auto;
+        height: 20vh;
+    }
+}
